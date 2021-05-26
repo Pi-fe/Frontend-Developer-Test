@@ -5,13 +5,105 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accordion demo page</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Materia+Icons">
-    <link rel="stylesheet" href="/css/accordion.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <script type="text/javascript" src="/js/accordion.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/accordion.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="js/accordion.js"></script>
 
 </head>
-<body>
-    
+
+<body> 
+    <div class="row">
+        <div class="col-1 col-s-1"><p></p></div>
+        <div class="col-11 col-s-7"><h1>Accordion demo</h1></div>
+    </div>
+    <div class="row">
+        <div class="col-1 col-s-1"><p></p></div>
+        <div id="my-accordion"></div>
+        <div class="col-6 col-s-2"><p></p></div>
+    </div>
+    <div class="row">
+        <div class="col-1 col-s-1"><p></p></div>
+        <div id="my-accordion2"></div>
+        <div class="col-6 col-s-2"><p></p></div>
+    </div>
+    <div class="row">
+        <div class="col-1 col-s-1"><p></p></div>
+        <div id="my-accordion3"></div>
+        <div class="col-6 col-s-2"><p></p></div>
+    </div>
+
+<script type="text/javascript">
+    var options = {
+        container: 'my-accordion',
+        mainTitle: 'Main Accordion Title',
+        panels:[{
+            title:'My Profile',
+            subtitle: 'Update your profile information',
+            content: '<p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam, nisi ut aliquid ex ea commodi consequatur. Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+        },{
+            title:'Change password',
+            subtitle:'Change your login password',
+            content: '<p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam, nisi ut aliquid ex ea commodi consequatur. Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+
+        },{
+            title: 'Preferences',
+            subtitle: 'Set your language and timezone preferences',
+            content: '<p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam, nisi ut aliquid ex ea commodi consequatur. Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+        },{
+            title: 'No description title',
+            content: '<p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam, nisi ut aliquid ex ea commodi consequatur. Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<p>'
+        }]
+    }
+    var myaccordion = new Accordion(options); 
+
+    var options2 = {
+        container: 'my-accordion2',
+        mainTitle: 'Test 2',
+        panels:[{
+            title:'My Profile',
+            subtitle: 'Update your profile information',
+            content: '<p>ciao</p>'
+        },{
+            title:'Change password',
+            subtitle:'Change your login password',
+            content: '<p>HTML content for this panel</p>'
+
+        },{
+            title: 'Preferences',
+            subtitle: 'Set your language and timezone preferences',
+            content: '<p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam, nisi ut aliquid ex ea commodi consequatur. Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+        },{
+            title: 'No description title',
+            content: '<p>prova</p>'
+        }]
+    }
+    var myaccordion2 = new Accordion(options2); 
+
+    var options3 = {
+        container: 'my-accordion3',
+        mainTitle: '',
+        panels:[{
+            title:'My Profile',
+            subtitle: 'Update your profile information',
+            content: '<p>ciao</p>'
+        },{
+            title:'Change password',
+            subtitle:'Change your login password',
+            content: '<p>HTML content for this panel</p>'
+
+        },{
+            title: 'Preferences',
+            subtitle: 'Set your language and timezone preferences',
+            content: '<p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam, nisi ut aliquid ex ea commodi consequatur. Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+        },{
+            title: 'No description title',
+            content: '<p>prova</p>'
+        }]
+    }
+    var myaccordion3 = new Accordion(options3); 
+
+</script>
+<!--<span class="material-icons icon">keyboard_arrow_up</span>-->
 </body>
 </html>

@@ -1,3 +1,80 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial;
+}
 
+.box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.main-panel {
+  background-color: white;
+  z-index: -1;
+  height: 60px;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+}
+.main-panel p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+  padding-left: 25px;
+}
+
+.panelclose {
+  background-color: white;
+  cursor: pointer;
+  margin: 0px;
+  padding: 0px;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid #e4e6e5;
+  transition: margin 0.6s ease-out;
+}
+.panelclose .title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0465ac;
+  padding-left: 25px;
+  margin-bottom: 12px;
+}
+.panelclose .description {
+  font-size: 12px;
+  font-weight: 600;
+  color: #999;
+  padding-left: 25px;
+  margin: 0px;
+}
+.panelclose .content {
+  height: 0px;
+  overflow: hidden;
+  font-size: 13px;
+  font-weight: 400;
+  color: #333;
+  transition: height 0.6s ease-out;
+}
+.panelclose .content * {
+  margin: 25px;
+}
+.panelclose .icondown::after {
+  content: "keyboard_arrow_down";
+  color: #0465ac;
+  font-size: 26px;
+  display: block;
+  float: right;
+  padding: 22px 25px 21px 25px;
+}
+.panelclose .iconup::after {
+  content: "keyboard_arrow_up";
+}
+
+.panelopen {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.material-icons {
+  display: block;
+}
 
 /*# sourceMappingURL=accordion.css.map */
