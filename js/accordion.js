@@ -27,11 +27,10 @@ class Accordion{
         var content =  document.getElementsByClassName("content");
         for(let i=x; i < panel.length; i++){
             x++;
-            panel[i].addEventListener("click" ,function accordion_change(){
-                icon[i].classList.toggle("iconup");
-                panel[i].classList.toggle("panelopen");
-                document.querySelectorAll('.iconup');
-                if(content[i].style.height){
+            panel[i].addEventListener("click" ,function accordion_change(){  //al click del mouse cambia:
+                icon[i].classList.toggle("iconup");         //icona
+                panel[i].classList.toggle("panelopen");     //spazio tra i pannelli
+                if(content[i].style.height){                //apertura e chiusura content
                     content[i].style.height = null;
                 }else{
                     content[i].style.height = content[i].scrollHeight +"px";
